@@ -1,2 +1,2 @@
-# autoUpdateDebian
-A set of instructions to automatically update debian on startup
+# autoUpdate
+A set of instructions to automatically update debian or arch linux on startup
