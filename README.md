@@ -2,7 +2,7 @@
 
 AutoUpdateLinux is a set of instructions to automatically update Debian or Arch linux on startup, to ease up the jobs of sysadmins. So to fix any problem you might have on your server, just reboot, then it will apply updates, and reboot again and you're good to go! Normal people might not see the convenince of this script but sysadmins does.
 
-##Debian
+## Debian
 
 ##### Prerequisites
 
@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install git
 ```
 
-##### Download
+##### Download & setup
 
 Login as a user to do the following steps, not as root!
 
@@ -37,5 +37,41 @@ sudo systemctl start update
 # Wait a bit for the script to launch before testing its output with this command
 sudo systemctl status update
 ```
+Here it is, everything is set up!
+For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/```.
+
+## Arch linux
+
+##### Prerequisites
+
+We just need git and updates (of course!)
+
+```sh
+sudo pacman -Syu git
+```
+
+#### Download & setup
+
+Login as a user to do the following steps, not as root!
+
+```sh
+# Got to your home directory
+cd ~
+# Clone project
+git clone https://github.com/Pingasmaster/autoUpdateLinux/
+# Enter folder & look around
+cd autoUpdateLinux/ && ls
+# Give correct permissions to files
+sudo chmod 700 updates-arch.sh
+sudo chmod +x updates-arch.sh
+# Create systemctl service
+sudo mv update-arch.service /etc/systemd/system/update.service
+# Add service at startup and start it now for a test
+sudo systemctl enable update
+sudo systemctl start update
+# Wait a bit for the script to launch before testing its output with this command
+sudo systemctl status update
+```
+
 Here it is, everything is set up!
 For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/```.
