@@ -1,0 +1,13 @@
+[Unit]
+
+Description=update
+
+After=default.target
+
+[Service]
+
+ExecStart=~/autoUpdateLinux/updates-arch.sh
+
+[Install]
+
+WantedBy=default.target
