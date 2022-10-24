@@ -38,7 +38,7 @@ sudo systemctl start update
 sudo systemctl status update
 ```
 Here it is, everything is set up!
-For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/```.
+For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/``` which inspired this project!
 
 ## Arch linux
 
@@ -74,4 +74,4 @@ sudo systemctl status update
 ```
 
 Here it is, everything is set up!
-For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/```.
+For more on systemctl startup services, you can read ```https://linuxhint.com/run-script-debian-11-boot-up/``` which inspired this project!
