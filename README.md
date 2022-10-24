@@ -47,7 +47,7 @@ For more on systemctl startup services, you can read ```https://linuxhint.com/ru
 We just need git and updates (of course!)
 
 ```sh
-sudo pacman -Syu git
+sudo pacman -Syu git --needed
 ```
 
 #### Download & setup
