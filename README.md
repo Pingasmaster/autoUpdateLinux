@@ -30,7 +30,7 @@ cd autoUpdateLinux/ && ls
 sudo chmod 700 updates-debian.sh
 sudo chmod +x updates-debian.sh
 # Create systemctl service
-sudo mv update-debian.service /etc/systemd/system/update.service
+sudo cp update-debian.service /etc/systemd/system/update.service
 # Add service at startup and start it now for a test
 sudo systemctl enable update
 sudo systemctl start update
@@ -65,7 +65,7 @@ cd autoUpdateLinux/ && ls
 sudo chmod 700 updates-arch.sh
 sudo chmod +x updates-arch.sh
 # Create systemctl service
-sudo mv update-arch.service /etc/systemd/system/update.service
+sudo cp update-arch.service /etc/systemd/system/update.service
 # Add service at startup and start it now for a test
 sudo systemctl enable update
 sudo systemctl start update
